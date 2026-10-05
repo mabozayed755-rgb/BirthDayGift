@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday, Basant</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;600&display=swap">
+<style>
+:root{--wine:#6b0a12;--deep:#4a060c;--blush:#f9d3de;--rose:#e58aa3;--lav:#b7aed0;--cream:#fff3ee;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{height:100%}
+body{height:100%;font-family:Lora,Georgia,serif;background:var(--wine);color:var(--cream);overflow:hidden}
+.script{font-family:'Great Vibes','Brush Script MT',cursive;font-weight:400}
+.view{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;overflow-y:auto}
+.view.on{display:flex;animation:in .5s ease}
+@keyframes in{from{opacity:0}to{opacity:1}}
+#intro{background:var(--blush);color:var(--wine)}
+#intro h1{font-size:clamp(44px,12vw,72px);margin-bottom:20px}
+.env{width:min(78vw,300px);aspect-ratio:3/2;background:var(--wine);border-radius:6px;position:relative;cursor:pointer;box-shadow:0 14px 30px rgba(74,6,12,.35);border:0;animation:bob 2.6s ease-in-out infinite}
+.env::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom right,transparent 49.5%,#00000022 50%) 0 0/50% 100% no-repeat,linear-gradient(to bottom left,transparent 49.5%,#00000022 50%) 100% 0/50% 100% no-repeat}
+.seal{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#c73a4c,#7e1019);display:grid;place-items:center;font-size:24px;box-shadow:0 3px 8px #0006}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-1deg)}}
+.hint{margin-top:22px;font-size:15px;opacity:.8}
+#menu h2{font-size:clamp(40px,11vw,60px);margin-bottom:28px}
+.opts{display:flex;gap:22px;flex-wrap:wrap;justify-content:center}
+.opt{background:none;border:0;color:var(--cream);cursor:pointer;font:600 15px Lora,serif;letter-spacing:.12em;display:flex;flex-direction:column;align-items:center;gap:10px;padding:8px}
+.opt svg{width:104px;height:104px;transition:transform .25s}
+.opt:hover svg,.opt:focus-visible svg{transform:translateY(-6px) scale(1.06)}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.back{position:absolute;left:16px;top:calc(14px + env(safe-area-inset-top,0px));width:42px;height:42px;border-radius:50%;border:2px solid currentColor;background:none;color:inherit;font-size:20px;cursor:pointer}
+.gingham{background-color:var(--lav);background-image:linear-gradient(90deg,#ffffff55 50%,transparent 50%),linear-gradient(#ffffff55 50%,transparent 50%);background-size:44px 44px;color:var(--deep)}
+.letter{background:var(--cream);max-width:380px;width:100%;padding:34px 26px;border-radius:4px;box-shadow:0 12px 28px rgba(40,20,60,.35);position:relative;color:var(--deep);transform-origin:bottom;animation:rise .9s ease both}
+@keyframes rise{from{transform:translateY(60px) scale(.9);opacity:0}}
+.letter h3{font-size:44px;color:var(--wine);margin-bottom:12px}
+.letter p{line-height:1.75;font-size:16px;margin-bottom:8px}
+.bow{position:absolute;right:-8px;bottom:-14px;font-size:34px}
+#flowers .wrap{display:grid;grid-template-columns:1fr;gap:12px;max-width:420px;width:100%;justify-items:center}
+.bq{width:min(66vw,270px);filter:drop-shadow(0 10px 14px #0005)}
+.chip{background:#f6dcf0;color:var(--wine);border:2px solid #fff;border-radius:14px;padding:10px 14px;font-size:14px;box-shadow:0 4px 10px #0003;width:100%}
+.cap{font-size:34px;margin-top:6px}
+#cake{background-color:var(--lav);background-image:linear-gradient(90deg,#ffffff55 50%,transparent 50%),linear-gradient(#ffffff55 50%,transparent 50%);background-size:44px 44px;color:var(--wine)}
+#cake h2{font-size:clamp(40px,11vw,58px);margin-bottom:6px}
+.board{position:relative;width:min(92vw,420px);height:min(92vw,420px);margin-top:8px}
+.board>*{position:absolute}
+.cakebox{left:50%;top:50%;width:46%;aspect-ratio:1;transform:translate(-50%,-50%);background:repeating-conic-gradient(#c7344d 0 25%,#fff 0 50%) 0 0/22px 22px;padding:12px;border:4px solid #fff;box-shadow:0 8px 18px #0004;cursor:pointer}
+.cakebox svg{width:100%;height:100%;background:#fbd4de;border-radius:50%}
+.ph{width:30%;aspect-ratio:3/4;background:#1c1416;border:7px solid #fff;border-bottom-width:22px;box-shadow:0 6px 14px #0005;cursor:pointer;display:grid;place-items:center;color:#fff;font-size:12px;background-size:cover;background-position:center;transition:transform .25s}
+.ph:hover{transform:scale(1.06) rotate(0)!important}
+.p1{left:2%;top:2%;transform:rotate(-8deg)}.p2{right:2%;top:6%;transform:rotate(7deg)}
+.p3{left:4%;bottom:2%;transform:rotate(6deg)}.p4{right:4%;bottom:0;transform:rotate(-6deg)}
+.vinyl{width:24%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--wine) 0 14%,#fff 15% 17%,#171012 18% 100%);left:50%;top:-4%;transform:translateX(-50%);cursor:pointer;border:0;color:#fff;font:600 10px Lora,serif;display:grid;place-items:center}
+.vinyl.spin{animation:spin 3s linear infinite}
+@keyframes spin{to{transform:translateX(-50%) rotate(360deg)}}
+.flame{animation:flick .5s ease-in-out infinite alternate;transform-origin:50% 100%}
+@keyframes flick{to{transform:scale(1.15,.9)}}
+.note{font-size:13px;margin-top:10px;opacity:.85}
+.conf{position:fixed;top:-20px;width:10px;height:14px;pointer-events:none;animation:fall 2.8s linear forwards;z-index:9}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<section id="intro" class="view on">
+  <h1 class="script">Happy Birthday!</h1>
+  <button class="env" id="open" aria-label="Open the envelope"><span class="seal">♥</span></button>
+  <p class="hint">Tap the envelope, Basant</p>
+</section>
+
+<section id="menu" class="view">
+  <h2 class="script">Choose Your Surprise</h2>
+  <div class="opts">
+    <button class="opt" data-go="message"><svg viewBox="0 0 100 100"><rect x="8" y="26" width="84" height="52" rx="4" fill="#f9dccf"/><path d="M8 28 50 58 92 28" fill="none" stroke="#e7b9a8" stroke-width="3"/><path d="M50 62c-9-7-14-11-14-16a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 5-5 9-14 16z" fill="#c9622d" transform="translate(0 -4) scale(1)"/></svg>MESSAGE</button>
+    <button class="opt" data-go="flowers"><svg viewBox="0 0 100 100"><path d="M50 96 30 52h40z" fill="#fff1e2"/><path d="M50 96 40 52h20z" fill="#f4c6d3"/><g><circle cx="38" cy="36" r="13" fill="#f6a8bd"/><circle cx="60" cy="32" r="13" fill="#fbd0a8"/><circle cx="50" cy="20" r="11" fill="#f4849f"/><circle cx="68" cy="46" r="9" fill="#f6a8bd"/><circle cx="30" cy="50" r="9" fill="#fbd0a8"/></g><path d="M40 90l10-6 10 6-10 4z" fill="#e58aa3"/></svg>FLOWERS</button>
+    <button class="opt" data-go="cake"><svg viewBox="0 0 100 100"><ellipse cx="50" cy="82" rx="38" ry="10" fill="#f6c0cd"/><path d="M14 56h72v26a36 10 0 0 1-72 0z" fill="#fde0e8"/><ellipse cx="50" cy="56" rx="36" ry="10" fill="#fff"/><path d="M14 56a36 10 0 0 0 72 0" fill="none" stroke="#f08aa5" stroke-width="5" stroke-dasharray="6 5"/><circle cx="50" cy="40" r="9" fill="#c7344d"/><circle cx="47" cy="37" r="2.5" fill="#fff" opacity=".7"/><path d="M50 32q4-8 9-8" stroke="#3b7a3b" stroke-width="3" fill="none"/></svg>CAKE</button>
+  </div>
+</section>
+
+<section id="message" class="view gingham">
+  <button class="back" data-go="menu" aria-label="Back">←</button>
+  <div class="letter">
+    <h3 class="script">My Basbosa,</h3>
+    <p>Today is your special day, but I'm the one who received the greatest gift by having you in my life.</p>
+    <p>Every smile of yours brightens my days, and every moment with you becomes unforgettable.</p>
+    <p>I hope this new chapter brings you happiness, beautiful memories, and all the love you deserve. You truly deserve the whole world and so much more.</p>
+    <p><b>Happy Birthday, Basbosa!</b></p>
+    <span class="bow">🎀</span>
+  </div>
+</section>
+
+<section id="flowers" class="view">
+  <button class="back" data-go="menu" aria-label="Back">←</button>
+  <div class="wrap">
+    <div class="chip">Flowers for the most beautiful person ♥</div>
+    <svg class="bq" viewBox="0 0 200 240" aria-label="Bouquet of roses">
+      <defs>
+        <radialGradient id="shade" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".4"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></radialGradient>
+        <linearGradient id="kraft" x1="0" x2="1"><stop offset="0" stop-color="#f3e4d3"/><stop offset=".5" stop-color="#fff7ee"/><stop offset="1" stop-color="#e9d3bd"/></linearGradient>
+        <linearGradient id="pap2" x1="0" x2="1"><stop offset="0" stop-color="#e9b9cc"/><stop offset="1" stop-color="#f7d9e5"/></linearGradient>
+        <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fa86b"/><stop offset="1" stop-color="#2f6f45"/></linearGradient>
+        <g id="rose">
+          <circle r="24" fill="currentColor"/>
+          <g fill="currentColor" stroke="#0000002e" stroke-width="1">
+            <ellipse cy="-11" rx="11" ry="15"/><ellipse cy="-11" rx="11" ry="15" transform="rotate(72)"/><ellipse cy="-11" rx="11" ry="15" transform="rotate(144)"/><ellipse cy="-11" rx="11" ry="15" transform="rotate(216)"/><ellipse cy="-11" rx="11" ry="15" transform="rotate(288)"/>
+          </g>
+          <circle r="13" fill="currentColor" stroke="#0000003a"/>
+          <path d="M-7 1a7 7 0 1 1 7 7M-3 -1a3 3 0 1 1 3 3" fill="none" stroke="#00000055" stroke-width="2" stroke-linecap="round"/>
+          <circle r="24" fill="url(#shade)"/>
+        </g>
+      </defs>
+      <g fill="url(#leaf)" stroke="#1f5535" stroke-width=".8">
+        <path d="M100 130C70 118 44 96 38 70c28 4 56 24 62 60z"/>
+        <path d="M100 130c30-12 56-34 62-60-28 4-56 24-62 60z"/>
+        <path d="M100 126C88 100 90 70 100 48c12 22 12 52 0 78z"/>
+      </g>
+      <g stroke="#3f8f5a" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M100 170 70 80M100 170l36-92M100 170 56 100M100 170l46-70M100 170V60"/></g>
+      <g fill="#fff" stroke="#e6e0ea" stroke-width=".6">
+        <circle cx="42" cy="84" r="3.2"/><circle cx="36" cy="94" r="2.6"/><circle cx="48" cy="96" r="2.4"/><circle cx="158" cy="82" r="3.2"/><circle cx="165" cy="94" r="2.6"/><circle cx="152" cy="97" r="2.4"/><circle cx="76" cy="40" r="2.6"/><circle cx="124" cy="38" r="2.6"/><circle cx="84" cy="32" r="2.2"/>
+      </g>
+      <use href="#rose" transform="translate(100 62) scale(1.05)" color="#e8456f"/>
+      <use href="#rose" transform="translate(62 90) scale(.95)" color="#f7a07a"/>
+      <use href="#rose" transform="translate(138 88) scale(.95)" color="#f58aa9"/>
+      <use href="#rose" transform="translate(84 112) scale(.85)" color="#f4b6c8"/>
+      <use href="#rose" transform="translate(122 114) scale(.85)" color="#d9345f"/>
+      <path d="M100 236 30 116Q100 150 170 116z" fill="url(#kraft)" stroke="#d4bca4" stroke-width="1"/>
+      <path d="M100 236 62 124Q100 140 138 124z" fill="url(#pap2)" stroke="#d99ab4" stroke-width="1"/>
+      <path d="M100 236 86 132M100 236l16-104" stroke="#00000014" stroke-width="1.5" fill="none"/>
+      <g transform="translate(100 176)"><path d="M0 0-26-14c-6 10-6 20 0 28z" fill="#c7344d"/><path d="M0 0 26-14c6 10 6 20 0 28z" fill="#c7344d"/><path d="M-26-14 0 0v0l-26 14" fill="#00000022"/><path d="M0 0-14 30M0 0 14 30" stroke="#a82640" stroke-width="5" stroke-linecap="round"/><circle r="6" fill="#e0536c"/></g>
+    </svg>
+    <div class="chip">These flowers are just for you ♥</div>
+    <div class="chip">You deserve all the flowers in the world ♥</div>
+    <p class="cap script">A bouquet made with love</p>
+  </div>
+</section>
+
+<section id="cake" class="view">
+  <button class="back" data-go="menu" aria-label="Back">←</button>
+  <h2 class="script">Happy Birthday!</h2>
+  <div class="board">
+    <label class="ph p1" id="p1"><input type="file" accept="image/*" hidden>+ photo</label>
+    <label class="ph p2"><input type="file" accept="image/*" hidden>+ photo</label>
+    <label class="ph p3"><input type="file" accept="image/*" hidden>+ photo</label>
+    <label class="ph p4"><input type="file" accept="image/*" hidden>+ photo</label>
+    <button class="vinyl" id="vinyl" aria-label="Play music">CLICK HERE</button>
+    <div class="cakebox" id="cakebox" role="button" tabindex="0" aria-label="Blow out the candle">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#fff"/><circle cx="50" cy="50" r="36" fill="#fcc4d2"/><g fill="#c7344d"><circle cx="50" cy="22" r="7"/><circle cx="78" cy="50" r="7"/><circle cx="50" cy="78" r="7"/><circle cx="22" cy="50" r="7"/><circle cx="70" cy="30" r="6"/><circle cx="30" cy="30" r="6"/><circle cx="70" cy="70" r="6"/><circle cx="30" cy="70" r="6"/></g><rect x="48" y="38" width="4" height="16" fill="#fff"/><path class="flame" id="flame" d="M50 28c5 5 4 9 0 11-4-2-5-6 0-11z" fill="#ffb02e"/></svg>
+    </div>
+  </div>
+  <p class="note">Tap the cake to blow out the candle · tap a frame to add a photo</p>
+</section>
+
+<script>
+const $=s=>document.querySelector(s),all=s=>[...document.querySelectorAll(s)];
+function show(id){all('.view').forEach(v=>v.classList.toggle('on',v.id===id));if(id==='cake')confetti()}
+$('#open').onclick=()=>show('menu');
+all('[data-go]').forEach(b=>b.onclick=()=>show(b.dataset.go));
+function confetti(){const c=['#e58aa3','#fff3ee','#b7aed0','#c7344d','#f9d3de'];
+for(let i=0;i<34;i++){const d=document.createElement('i');d.className='conf';
+d.style.left=Math.random()*100+'vw';d.style.background=c[i%5];d.style.animationDelay=Math.random()*1.2+'s';
+document.body.appendChild(d);setTimeout(()=>d.remove(),4500)}}
+all('.ph input').forEach(inp=>inp.onchange=e=>{const f=e.target.files[0];if(!f)return;
+const l=inp.parentElement;l.style.backgroundImage=`url(${URL.createObjectURL(f)})`;l.firstChild.textContent=''});
+$('#cakebox').onclick=()=>{$('#flame').style.display='none';confetti()};
+let ctx,timer,on=false;
+$('#vinyl').onclick=()=>{
+ const v=$('#vinyl');on=!on;v.classList.toggle('spin',on);
+ try{
+  if(on){ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();
+   const n=[392,392,440,392,523,494,392,392,440,392,587,523];let i=0;
+   const play=()=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=n[i%n.length];
+    g.gain.setValueAtTime(.15,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+.45);
+    o.connect(g).connect(ctx.destination);o.start();o.stop(ctx.currentTime+.5);i++};
+   play();timer=setInterval(play,520)}else clearInterval(timer);
+ }catch(e){}
+};
+</script>
+</body>
+</html>
